@@ -19,10 +19,3 @@
 # echo 'src-git messense https://github.com/messense/aliyundrive-webdav' >>feeds.conf.default
 ## 修改DTS的spi_nand的spi-max-frequency为52MHz
 # sed -i 's/spi-max-frequency = <20000000>/spi-max-frequency = <52000000>/' target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7986a-xiaomi-redmi-router-ax6000-uboot.dts
-
-rm -rf feeds/luci/applications/luci-app-passwall
-sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
-git pull
-./scripts/feeds update -a
-./scripts/feeds install -a
